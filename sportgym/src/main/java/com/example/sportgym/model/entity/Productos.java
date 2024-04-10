@@ -1,5 +1,6 @@
 package com.example.sportgym.model.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 
@@ -9,12 +10,12 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="productos")
-public class productos {
+public class Productos {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name="idProductos")
-    private int idProductos;
+    @Column(name="id_productos")
+    private int id_productos;
 
     @Column(name="nombre")
     private String nombre;
