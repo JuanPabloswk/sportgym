@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
 
+
 export function Login({setUser}) {
     const [nombre, setNombre] = useState('');
     const [contraseña, setContraseña] = useState('');
