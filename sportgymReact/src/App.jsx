@@ -14,7 +14,7 @@ export default function App() {
         {
           !user.length > 0
           ? <Login setUser = {setUser} />  
-          : <Inicio user = {user} setUser = {setUser} />
+          : <Inicio user = {user} setUser = {setUser}  />
         }
       </div>
       
