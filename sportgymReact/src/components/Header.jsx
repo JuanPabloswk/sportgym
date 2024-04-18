@@ -2,11 +2,7 @@ import '../stylesheets/Header.css';
 import { FaUser } from 'react-icons/fa';
 
 
-export function Header ({user, setUser}) {
-
-    const handleLogout = () => {
-        setUser([])
-    }
+export function Header () {
 
     return (
     <header>

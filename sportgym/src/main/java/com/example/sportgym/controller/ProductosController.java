@@ -24,7 +24,7 @@ public class ProductosController {
     }
 
     @DeleteMapping("/productos/{id}")
-    public void delete(@PathVariable int    id) {
+    public void delete(@PathVariable int  id) {
         Productos productosDelete = productosService.findById(id);
         productosService.delete(productosDelete);
     }

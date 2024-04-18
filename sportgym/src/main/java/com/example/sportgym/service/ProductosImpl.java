@@ -12,7 +12,6 @@ public class ProductosImpl implements IProductos {
     @Autowired
     private ProductosDao productosDao;
 
-
     @Transactional
     @Override
     public Productos save(Productos productos) {

@@ -1,21 +1,18 @@
 import './App.css';
 import { Login }  from './components/Login.jsx';
 import { Inicio } from './components/Inicio.jsx';
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 export default function App() {
-
-  const [user, setUser] = useState([])
 
   return (
     <>
       <div className='App'>   
         
-        {
-          !user.length > 0
-          ? <Login setUser = {setUser} />  
-          : <Inicio user = {user} setUser = {setUser}  />
-        }
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/inicio' element={<Inicio />} />
+        </Routes>
       </div>
       
     </>
