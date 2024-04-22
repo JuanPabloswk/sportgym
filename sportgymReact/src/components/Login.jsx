@@ -1,33 +1,42 @@
 import '../stylesheets/Login.css';
 import { FaUser } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 export function Login() {
 
     return (
 
-        <section>
+        <div className='login'>
 
-            <h1>Login</h1>
+            <section>
 
-            <form>
-                <input type='text' placeholder='Ingresa tu usuario' value='nombre'required />
-                <FaUser className='icon1' />
-                
-                <input type='password' placeholder='Ingresa tu contraseña' value='contraseña'  required />
-                <FaLock className='icon2' />
+                <h1>Login</h1>
 
-                <button>Iniciar Sesion</button>
-            </form>
+                <form>
+                    <input type='text' placeholder='Ingresa tu nombre' value='nombre' required />
+                    <FaUser className='icon1' />
+                    
+                    <input type='password' placeholder='Ingresa tu contraseña' value='contraseña'  required />
+                    <FaLock className='icon2' />
 
-            <div className='olvidaste'>
-                <a href='https://developer.mozilla.org/en-US/' target='_blank'>¿Olvidaste tu contraseña?</a>
-                <a href='https://developer.mozilla.org/en-US/' target='_blank'>¿No tienes cuenta?</a>
-            </div>
+                    <Link to='/inicio'>
+                        <button className='boton'>Iniciar sesion</button>
+                    </Link>
+                </form>
 
-        </section>
+                <div className='botonRegistro'>
+                    <a href='https://developer.mozilla.org/en-US/' >¿Olvidaste tu contraseña?</a>
+                    <a href='https://developer.mozilla.org/en-US/' >¿No tienes cuenta?</a>
+                </div>
+
+            </section>
+
+        </div>
+
         
-    );
+        
+    )
   }
   

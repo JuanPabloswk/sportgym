@@ -1,6 +1,6 @@
 package com.example.sportgym.controller;
 
-import com.example.sportgym.model.entity.Productos;
+import com.example.sportgym.model.Productos;
 import com.example.sportgym.service.IProductos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

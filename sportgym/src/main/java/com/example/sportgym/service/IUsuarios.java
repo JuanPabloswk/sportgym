@@ -1,6 +1,6 @@
 package com.example.sportgym.service;
 
-import com.example.sportgym.model.entity.Usuarios;
+import com.example.sportgym.model.Usuarios;
 
 public interface IUsuarios {
 

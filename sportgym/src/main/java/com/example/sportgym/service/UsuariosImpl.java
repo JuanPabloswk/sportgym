@@ -1,7 +1,7 @@
 package com.example.sportgym.service;
 
-import com.example.sportgym.model.dao.UsuariosDao;
-import com.example.sportgym.model.entity.Usuarios;
+import com.example.sportgym.repository.UsuariosDao;
+import com.example.sportgym.model.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

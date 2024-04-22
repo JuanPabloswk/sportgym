@@ -1,7 +1,7 @@
 .Inicio {
-    background-size: cover;
-    width: 100%;
+    width: auto;
     min-height: 100vh;
+    background-color: rgb(127, 89, 89);
 }
 
 .portada {

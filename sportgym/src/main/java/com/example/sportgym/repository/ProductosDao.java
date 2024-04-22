@@ -1,6 +1,6 @@
-package com.example.sportgym.model.dao;
+package com.example.sportgym.repository;
 
-import com.example.sportgym.model.entity.Productos;
+import com.example.sportgym.model.Productos;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProductosDao extends CrudRepository<Productos, Integer>{

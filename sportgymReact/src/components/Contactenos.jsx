@@ -1,7 +1,9 @@
+import { Header } from '../components/Header.jsx';
+
 export function Contactenos () {
     return (
         <div>
-            <h1>Contactenos</h1>
+            <Header />
         </div>
     )
 }

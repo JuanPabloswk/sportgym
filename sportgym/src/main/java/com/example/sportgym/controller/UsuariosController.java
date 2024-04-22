@@ -1,6 +1,6 @@
 package com.example.sportgym.controller;
 
-import com.example.sportgym.model.entity.Usuarios;
+import com.example.sportgym.model.Usuarios;
 import com.example.sportgym.service.IUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.example.sportgym.model.entity;
+package com.example.sportgym.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,6 +16,9 @@ public class Productos {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id_producto")
     private Integer id_producto;
+
+    @Column(name="imagen")
+    private String imagen;
 
     @Column(name="nombre")
     private String nombre;

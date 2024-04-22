@@ -1,4 +1,4 @@
-package com.example.sportgym.model.entity;
+package com.example.sportgym.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,6 +7,8 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//ver si se cambia @ToString por @Builder
+//queda pendiente si usar metodos como unique en la base de datos
 @ToString
 @Entity
 @Table(name="usuarios")

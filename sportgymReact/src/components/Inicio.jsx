@@ -6,11 +6,11 @@ import { Footer } from '../components/Footer.jsx';
 
 export function Inicio () {
 
-    return (
+    return (          
         
         <div className='Inicio'>
             <Header />
-            <div className='portada'>
+            <div cflassName='portada'>
                 <div className='portadaTexto'>
                     <p>TRANSFORMA TU CUERPO</p>
                     <p> Las excusas queman 0 calorias por hora</p>
