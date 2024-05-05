@@ -34,5 +34,4 @@ public class ProductosController {
         return productosService.findById(id);
     }
 
-
 }
