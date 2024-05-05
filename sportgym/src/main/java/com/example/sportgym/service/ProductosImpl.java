@@ -1,7 +1,7 @@
 package com.example.sportgym.service;
 
-import com.example.sportgym.model.dao.ProductosDao;
-import com.example.sportgym.model.entity.Productos;
+import com.example.sportgym.repository.ProductosDao;
+import com.example.sportgym.model.Productos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,7 +11,6 @@ public class ProductosImpl implements IProductos {
 
     @Autowired
     private ProductosDao productosDao;
-
 
     @Transactional
     @Override

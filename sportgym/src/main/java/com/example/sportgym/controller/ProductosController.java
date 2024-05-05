@@ -1,6 +1,6 @@
 package com.example.sportgym.controller;
 
-import com.example.sportgym.model.entity.Productos;
+import com.example.sportgym.model.Productos;
 import com.example.sportgym.service.IProductos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class ProductosController {
     }
 
     @DeleteMapping("/productos/{id}")
-    public void delete(@PathVariable int    id) {
+    public void delete(@PathVariable int  id) {
         Productos productosDelete = productosService.findById(id);
         productosService.delete(productosDelete);
     }
@@ -33,6 +33,5 @@ public class ProductosController {
     public Productos showById(@PathVariable int id) {
         return productosService.findById(id);
     }
-
 
 }
