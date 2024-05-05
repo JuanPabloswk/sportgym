@@ -21,7 +21,7 @@ h2{
 }
 
 .estandar{
-    background-color: rgb(172, 96, 96);
+    background-color: rgb(148, 57, 57);
     height: 20em;
     width: 25%;
     display: flex;
@@ -33,7 +33,7 @@ h2{
 }
 
 .personalizado{
-    background-color: rgb(172, 96, 96);
+    background-color: rgb(133, 65, 65);
     height: 20em;
     width: 25%;
     display: flex;

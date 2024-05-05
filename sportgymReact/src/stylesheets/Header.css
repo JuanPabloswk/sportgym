@@ -1,14 +1,14 @@
 .menu {
-    background-color: rgb(255, 255, 255);
-    height:  3em;
+    background-color: gray;
+    height:  4em;
     width: auto;
     display: flex;
     justify-content: space-between;
 }
 
 .logo{
-    background-color: rgb(255, 255, 255);
-    height: 3em;
+
+    height: auto;
     width: 6em;
     padding: 0 1em;
 }
@@ -31,6 +31,7 @@
 
 .menu-botones li {
     list-style: none;
+    font-size: 1.3em;
 }
 
 .usuario {

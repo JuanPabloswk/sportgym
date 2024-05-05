@@ -10,7 +10,7 @@ export function Inicio () {
         
         <div className='Inicio'>
             <Header />
-            <div cflassName='portada'>
+            <div className='portada'>
                 <div className='portadaTexto'>
                     <p>TRANSFORMA TU CUERPO</p>
                     <p> Las excusas queman 0 calorias por hora</p>

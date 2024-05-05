@@ -15,10 +15,10 @@ export function Login() {
                 <h1>Login</h1>
 
                 <form>
-                    <input type='text' placeholder='Ingresa tu nombre' value='nombre' required />
+                    <input type='text' placeholder='Ingresa tu nombre'  required />
                     <FaUser className='icon1' />
                     
-                    <input type='password' placeholder='Ingresa tu contraseña' value='contraseña'  required />
+                    <input type='password' placeholder='Ingresa tu contraseña'  required />
                     <FaLock className='icon2' />
 
                     <Link to='/inicio'>
@@ -27,8 +27,10 @@ export function Login() {
                 </form>
 
                 <div className='botonRegistro'>
+                    <Link to='/registro'> 
+                    ¿No tienes cuenta?
+                    </Link>
                     <a href='https://developer.mozilla.org/en-US/' >¿Olvidaste tu contraseña?</a>
-                    <a href='https://developer.mozilla.org/en-US/' >¿No tienes cuenta?</a>
                 </div>
 
             </section>
