@@ -22,3 +22,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const mesActual = new Date().getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
     precioInput.value = '$' + preciosPorMes[mesActual].toFixed(2);
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mesesSelect = document.getElementById('duracion1');
+    const precioInput = document.getElementById('precio1');
+
+    const preciosPorMes = {
+        1: 150,
+        2: 600,
+        3: 1800,
+        4: 3600,
+        5: 7200
+    };
+
+    function actualizarPrecio() {
+        const mesSeleccionado = parseInt(mesesSelect.value);
+        const precio = preciosPorMes[mesSeleccionado];
+        precioInput.value = '$' + precio.toFixed(2);
+    }
+
+    mesesSelect.addEventListener('change', actualizarPrecio);
+
+    // Establecer el precio inicial para el mes actual
+    const mesActual = new Date().getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
+    precioInput.value = '$' + preciosPorMes[mesActual].toFixed(2);
+});

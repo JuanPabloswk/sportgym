@@ -4,8 +4,6 @@ import com.example.sportgym.Model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
 /**
  * Interfaz que define el repositorio para la entidad Usuario en la base de datos.
  * Se extiende JpaRepository para heredar métodos de operaciones CRUD proporcionados por Spring Data JPA.
@@ -29,4 +27,5 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
      */
 
     boolean existsByEmail(String email);
+
 }

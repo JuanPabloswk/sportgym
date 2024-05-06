@@ -25,11 +25,11 @@ public class Producto {
     private Integer precio;
 
     @ManyToOne
-    private CatProductos catProductos;
-
-    @ManyToOne
     private Usuario usuario;
 
+    public Producto() {
+
+    }
 
     @Override
     public String toString() {
@@ -39,7 +39,6 @@ public class Producto {
                 ", cantidad=" + cantidad +
                 ", imagen='" + imagen + '\'' +
                 ", precio=" + precio +
-                ", catProductos=" + catProductos +
                 ", usuario=" + usuario +
                 '}';
     }

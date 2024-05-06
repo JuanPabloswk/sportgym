@@ -1,8 +1,6 @@
 package com.example.sportgym.Controller;
 
-import com.example.sportgym.Model.CatProductos;
 import com.example.sportgym.Model.Producto;
-import com.example.sportgym.Service.CatProductosService;
 import com.example.sportgym.Service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,20 +10,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import java.util.List;
 
 /**
- * Controlador para la gestión de los productos de la tienda del gimnasio
+ * Controlador para la gestión de la tienda de productos del gimnasio
  */
 @Controller
 @RequestMapping("/administrador")
-public class productoController {
+public class ProductoController {
 
     @Autowired
     private ProductoService productoService;
-
-    @Autowired
-    private CatProductosService catProductosService;
 
     /**
      * Maneja las solicitudes GET para mostrar el listado paginado de productos.
@@ -38,7 +32,7 @@ public class productoController {
     public String listarProducto(Model model, @RequestParam(defaultValue = "0") int page){
         Pageable pageable = PageRequest.of(page, 8);
         Page<Producto> listadoProducto = productoService.listarProductoPaginado(pageable);
-        model.addAttribute("titulo","Lista de Producto");
+        model.addAttribute("titulo","Tienda");
         model.addAttribute("producto",listadoProducto);
         return "listarProducto";
     }
@@ -52,10 +46,8 @@ public class productoController {
     @GetMapping("/crearProducto")
     public String crear(Model model){
         Producto producto = new Producto();
-        List<CatProductos> listCategorias = catProductosService.listarCategorias();
-        model.addAttribute("titulo","Agregar un Producto");
+        model.addAttribute("titulo","Crear un Producto");
         model.addAttribute("producto",producto);
-        model.addAttribute("categorias",listCategorias);
         return "crearProducto";
     }
 
@@ -98,10 +90,8 @@ public class productoController {
             return "redirect:/administrador/tiendaProductos";
         }
 
-        List<CatProductos> listCategorias = catProductosService.listarCategorias();
-        model.addAttribute("titulo","Editar Producto");
+        model.addAttribute("titulo","Editar ProductoTienda");
         model.addAttribute("producto",producto);
-        model.addAttribute("categorias",listCategorias);
         return "crearProducto";
     }
 
@@ -131,4 +121,6 @@ public class productoController {
         redirectAttributes.addFlashAttribute("warning", "Producto eliminado con éxito");
         return "redirect:/administrador/tiendaProductos";
     }
+
+
 }
