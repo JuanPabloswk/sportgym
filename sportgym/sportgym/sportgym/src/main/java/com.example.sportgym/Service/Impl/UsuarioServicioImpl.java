@@ -3,6 +3,7 @@ package com.example.sportgym.Service.Impl;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import com.example.sportgym.Service.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,6 +89,17 @@ public class UsuarioServicioImpl implements UsuarioServicio {
     @Override
     public List<Usuario> listarUsuarios() {
         return usuarioRepositorio.findAll();
+    }
+
+    @Override
+    public List<Usuario> findAll() {
+        return List.of();
+    }
+
+
+    @Override
+    public Optional<Usuario> findById(Integer id) {
+        return Optional.empty();
     }
 
 }

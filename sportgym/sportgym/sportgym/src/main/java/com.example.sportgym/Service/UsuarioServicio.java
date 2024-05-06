@@ -4,6 +4,7 @@ import com.example.sportgym.Controller.dto.UsuarioRegistroDTO;
 import com.example.sportgym.Model.Usuario;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Interfaz que define los servicios relacionados con la entidad Usuario.
@@ -28,4 +29,7 @@ public  interface UsuarioServicio extends UserDetailsService {
 
     public List<Usuario> listarUsuarios();
 
+    List<Usuario> findAll();
+
+    Optional<Usuario> findById(Integer id);
 }

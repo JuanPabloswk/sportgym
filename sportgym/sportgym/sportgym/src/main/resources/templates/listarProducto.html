@@ -35,8 +35,7 @@
                 <ul class="navbar-nav ms-auto d-flex align-items-end">
 
                     <button class="nav-item active border-0 ms-2" style="background-color: rgba(20,135,229,0.42);" ><a class="nav-link text-dark" th:href="@{/administrador/tiendaProductos}">Tienda</a></button>
-                    <button class="nav-item border-0 ms-2" style="background-color: rgba(20,135,229,0.42)"><a class="nav-link text-dark" th:href="@{/administrador/listarCategorias}">Categorias</a></button>
-                    <button class="nav-item border-0 ms-2" style="background-color: rgba(20,135,229,0.42)"><a class="nav-link text-dark" th:href="@{/administrador/seguimientoPrestamos}">Préstamos</a></button>
+                    <button class="nav-item border-0 ms-2" style="background-color: rgba(20,135,229,0.42)"><a class="nav-link text-dark" th:href="@{/administrador/ventas}">Ventas</a></button>
                     <div class="nav-item"><a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}">
                         <img src="/Images/salir.svg" alt="Imagen Cerrar Sesión" style="width: 30px">
                     </a></div>
@@ -110,7 +109,7 @@
             <li th:each="i : ${#numbers.sequence(0, producto.totalPages - 1)}" class="page-item">
                 <a class="page-link" th:href="@{/administrador/tiendaProductos(page=${i})}" th:text="${i + 1}"></a>
             </li>
-            <li th:if="${inventario.number + 1 < producto.totalPages}" class="page-item">
+            <li th:if="${producto.number + 1 < producto.totalPages}" class="page-item">
                 <a class="page-link" th:href="@{/administrador/tiendaProductos(page=${producto.totalPages - 1})}">&gt;&gt;</a>
             </li>
         </ul>

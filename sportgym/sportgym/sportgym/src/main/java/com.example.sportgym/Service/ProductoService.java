@@ -4,6 +4,7 @@ import com.example.sportgym.Model.Producto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Interfaz que define los métodos para el servicio de gestión de producto.
@@ -46,4 +47,8 @@ public interface ProductoService {
      * @return Página de producto.
      */
     public Page<Producto> listarProductoPaginado(Pageable pageable);
+
+    Optional<Producto> get(Integer id);
+
+    //public Producto agregarProductoAlCarrito(Long idProducto);
 }
